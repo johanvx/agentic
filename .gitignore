@@ -1,0 +1,5 @@
+# Local reference material and working notes are not part of the public package.
+inbox/
+SESSION.md
+tmp/
+.DS_Store
