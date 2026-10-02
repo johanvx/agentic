@@ -29,7 +29,7 @@ Keep claims and examples honest: do not invent references, measurements, test ou
 
 1. Check the directory and `SKILL.md`: matching, valid name; useful description; readable instructions; resolvable bundled-file links; and dependencies or environment requirements stated where needed. For Pi-specific features, verify against the installed Pi documentation rather than guessing.
 2. Propose two or three realistic prompts that exercise different parts of the skill. Include a near miss when deciding whether its description is too broad. For a revision, compare against the previous version where practical.
-3. Ask for the user's view of the proposed prompts. If model runs are worthwhile and the user agrees to their cost, try the skill in Pi (for example, with `pi --skill ./path/to/skill`), inspect the resulting behavior, and record observed successes and failures. Do not report imagined runs or numbers. Static checks and a review of the draft are enough when live runs are not warranted.
+3. Ask for the user's view of the proposed prompts. If model runs are worthwhile and the user agrees to their cost, read [testing a skill in Pi](references/testing.md) for controlled resource selection, separate automatic/forced cases, and event-based verification. Record the test environment and observed behavior, not imagined runs or numbers. Static checks and a review of the draft are enough when live runs are not warranted.
 4. Revise from the observations and the user's feedback, aiming for reusable guidance rather than rules tailored only to the example prompts. Repeat when there is a specific problem to address; automated benchmarks are optional, not a prerequisite.
 
 ## Deliver

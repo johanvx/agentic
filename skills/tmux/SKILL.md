@@ -8,7 +8,7 @@ compatibility: Requires tmux on the local machine; SSH-pane work requires an aut
 
 A tmux pane is a terminal, not a remote filesystem adapter. Pi's `read`, `edit`, and `write` tools still operate locally; to work on a remote host through an SSH pane, send shell commands and inspect the terminal output. Pane capture can omit earlier output, echo typed commands, or contain secrets. Never represent it as an exact file transfer or a trustworthy exit status.
 
-For SSH-pane work, read [Using an existing SSH pane](references/ssh-pane.md) **before** interacting with one. For an agent-owned interactive process, read [Managing a separate tmux session](references/managed-sessions.md). Do not copy the private-socket quickstart from the reference skill for a user's existing Pi/SSH windows: a separate socket cannot see their panes.
+For SSH-pane work, read [Using an existing SSH pane](references/ssh-pane.md) **before** interacting with one. For an agent-owned interactive process or help running Pi inside tmux, read [Managing sessions and running Pi](references/managed-sessions.md). Do not copy the private-socket quickstart from the reference skill for a user's existing Pi/SSH windows: a separate socket cannot see their panes.
 
 ## Bind a target before acting
 

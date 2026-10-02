@@ -23,4 +23,6 @@ Use these conventions as defaults, not a mandatory outline for every skill. The 
 
 Try a small set of realistic requests, including different valid uses and, when relevant, one tempting false trigger. Show the proposed cases to the user. For an existing skill, compare the same requests with its earlier version if practical. Inspect actual outputs and ask for feedback; use objective checks where possible and avoid reporting made-up scores. Do not run paid model evaluations without agreement. Defer automated benchmarking until its added cost or complexity is justified.
 
+For model-based runs, read [testing a skill in Pi](testing.md). It separates automatic selection from forced invocation, controls competing resources, and explains what CLI events do and do not establish. Keep the Pi version, provider/model, tools, settings, and fixtures consistent when comparing revisions.
+
 Anthropic's [skill-creator](https://github.com/anthropics/skills/tree/main/skills/skill-creator) inspired this lightweight draft–test–feedback cycle. Its Claude-specific commands, evaluation scripts, viewer, and `.skill` packaging are not bundled here; use Pi facilities instead when appropriate.

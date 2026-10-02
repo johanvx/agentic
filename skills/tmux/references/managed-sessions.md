@@ -25,10 +25,18 @@ tmux -S /absolute/path/to/tmp/pi-work.sock capture-pane -p -J -t pi-work:0.0 -S 
 
 Use a pane ID discovered with `list-panes` for automation. Only send a command once the intended program's prompt is ready; `tmux wait-for` does not watch pane output. For long-running jobs, periodically capture a bounded amount of output, report progress without dumping sensitive text, and stop polling when the user or program indicates completion. Do not kill the job merely because a short poll timed out.
 
-## Cleanup and Pi's interface
+## Cleanup
 
 Ask before interrupting or closing a user-visible running process. On completion, `tmux -S "$SOCKET" kill-session -t "$SESSION"` is appropriate **only if you created that session**. Never run `kill-server` on a shared server. A detached session can remain intentionally when the user wants to resume it; say so explicitly.
 
-When the user runs Pi itself inside tmux, see the [Pi tmux guide](https://github.com/earendil-works/pi/blob/main/docs/tmux.md) for extended-key settings (`Shift+Enter`, etc.). These are terminal configuration concerns, not a way to grant the agent access to remote files. Never restart or kill the user's tmux server just to change keyboard settings without consent.
+## Run Pi inside tmux
+
+Pi 1.0 defaults to fullscreen: Pi owns the viewport and scrolling rather than relying on normal terminal history. A bounded `capture-pane` shows rendered terminal state, not a complete Pi transcript or reliable tool-result stream. Do not scrape the TUI to reconstruct a conversation or establish that a tool succeeded.
+
+When ordinary terminal scrollback is desired, offer `pi --tui-mode regular` for the next launch. This overrides the mode only for that invocation; do not change the user's default `tuiMode`, interrupt a running Pi, or restart their tmux server to apply it without consent.
+
+For an automated Pi run, prefer explicit `--print` for one final text response or `--mode json` for one-shot JSONL events. Use RPC only when ongoing bidirectional control is needed; see [Pi CLI integration](https://github.com/earendil-works/pi/blob/main/docs/cli-integration.md). `--mode text` alone does not force a one-shot run when stdin and stdout are terminals. Print-mode exit status and JSON events still need interpretation and deliverable checks; pane capture is not a substitute. Use project-local input/log files and avoid exposing sensitive output.
+
+See the [Pi tmux guide](https://github.com/earendil-works/pi/blob/main/docs/tmux.md) for extended-key settings (`Shift+Enter`, etc.). These are terminal configuration concerns, not a way to grant the agent access to remote files. Never restart or kill the user's tmux server just to change keyboard settings without consent.
 
 <!-- TODO: Add a tested socket-aware wait/status helper if manual polling becomes too cumbersome. The [reference skill](https://github.com/mitsuhiko/agent-stuff/tree/main/skills/tmux) always uses the default socket in its waiter and can match old history, so its scripts are intentionally not bundled. -->
