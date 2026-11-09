@@ -1,9 +1,9 @@
 ---
-name: commit-writer
+name: commit-writing
 description: Draft or review Conventional Commit messages from actual Git changes without staging or committing by default. Use when asked for a commit message, a review of one, or a commit; stage and create a commit only when the user explicitly requests it.
 ---
 
-# Commit Writer
+# Commit Writing
 
 **Drafting is the default.** A request for a message does not authorize `git add` or `git commit`. Even in commit mode, do not push, amend, rewrite history, bypass hooks, or change Git configuration unless separately authorized. Read the [Conventional Commit guide](references/conventional-commit-cheatsheet.md) when choosing a type, scope, body, or trailer.
 

@@ -1,9 +1,9 @@
 ---
-name: pr-writer
+name: pr-writing
 description: Draft or review a pull/merge request title and description from actual branch changes. Use when asked for a PR/MR description, reviewer-facing explanation, or help filling a repository PR template; explain the problem and impact before the solution. Never publish or update a PR.
 ---
 
-# PR Writer
+# PR Writing
 
 Draft a self-contained explanation that helps a reviewer decide whether the change solves a worthwhile problem and whether the implementation matches its intent. Read the [reviewer-focused writing guide](references/pr-writing-guide.md) for the reasoning behind the structure; use the [minimal body template](templates/pr-body.md) only when the repository has no suitable template.
 

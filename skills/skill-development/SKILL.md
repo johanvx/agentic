@@ -1,9 +1,9 @@
 ---
-name: skill-creator
+name: skill-development
 description: Create, review, and improve Pi skills. Use when drafting a SKILL.md, auditing a skill's structure or instructions, refining an existing skill, or checking whether a skill triggers and works on realistic tasks.
 ---
 
-# Skill Creator
+# Skill Development
 
 Help the user build skills that are useful when invoked, not merely valid on disk. Target Pi by default; prefer the portable Agent Skills directory layout when it meets the user's needs.
 
