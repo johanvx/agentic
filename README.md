@@ -25,6 +25,9 @@ with `/reload` after editing a skill. Git installations can be refreshed with
 | [pdf](skills/pdf/SKILL.md) | Inspect, create, or modify PDFs, forms, and scans. |
 | [pptx](skills/pptx/SKILL.md) | Read, author, or edit PowerPoint decks. |
 | [pr-writer](skills/pr-writer/SKILL.md) | Draft PR/MR descriptions without publishing a PR. |
+| [scientific-poster](skills/scientific-poster/SKILL.md) | Plan, build, and review assertion-evidence posters in Typst or PowerPoint. |
+| [scientific-presentation](skills/scientific-presentation/SKILL.md) | Plan, build, and review assertion-evidence talks in Typst, PowerPoint, or Beamer. |
+| [scientific-writing](skills/scientific-writing/SKILL.md) | Draft, revise, and proofread emails, letters, reports, and papers in Alley's style. |
 | [skill-creator](skills/skill-creator/SKILL.md) | Create or review Pi skills. |
 | [tmux](skills/tmux/SKILL.md) | Work with tmux panes, including authenticated SSH shells. |
 | [uv](skills/uv/SKILL.md) | Manage new Python work with `uv` without changing an existing project's tooling. |
