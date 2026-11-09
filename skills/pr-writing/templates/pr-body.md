@@ -20,4 +20,8 @@
 
 ## How to test
 <Steps a reviewer can perform; these are not tests already run.>
+
+## Reviewing
+<For several commits or a large diff: the commits in order, one line each,
+ or where to start reading.>
 -->
