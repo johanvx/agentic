@@ -24,9 +24,9 @@ See the [Conventional Commits specification](https://www.conventionalcommits.org
 | `chore` | Maintenance not covered above |
 | `revert` | Reverting a commit |
 
-A scope is a short noun such as `parser`, `ui`, or `deps`; omit it when it does not improve clarity. Prefer a specific subject with the **whole line** under 50 characters, and no final period. Write `add`, `fix`, or `remove` rather than `added` or `fixes`. Do not turn a scoped header into a misleadingly vague one just to meet a length limit.
+A scope is a short noun such as `parser`, `ui`, or `deps`; omit it when it does not improve clarity. Prefer a specific subject with the **whole line** under 50 characters (72 at most), and no final period. Say what changes, not which file; in a series of commits, no two subjects should be the same. Write `add`, `fix`, or `remove` rather than `added` or `fixes`. Do not turn a scoped header into a misleadingly vague one just to meet a length limit.
 
-Only add a body when the reason or design trade-off would otherwise be unclear. Describe the problem before the solution. Wrap prose at 72 columns; leave literal code, paths, and commands intact. Do not claim a test was run unless it was observed.
+Only add a body when the reason or design trade-off would otherwise be unclear. Describe the problem and its impact before the solution; see [describing and separating changes](describing-and-separating.md). Wrap prose at 72 columns; leave literal code, paths, and commands intact. Do not claim a test was run unless it was observed.
 
 A `!` in the header marks a breaking change. A real breaking change can also use a `BREAKING CHANGE:` trailer explaining what users must change; verify that impact before writing it. All other trailers, including `Closes #123` and `Assisted-by`, require the user's explicit request. Supplying an issue number alone is not permission to add a trailer.
 
